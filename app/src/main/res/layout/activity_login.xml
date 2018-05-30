@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.coco.imlivedemo.ui.LoginActivity">
+
+    <EditText
+        android:id="@+id/mEd_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="lzllzllhl" />
+
+    <EditText
+        android:id="@+id/mEd_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="12345678"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/mBtn_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="login" />
+
+        <Button
+            android:id="@+id/mBtn_regist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="regist" />
+    </LinearLayout>
+
+</LinearLayout>
