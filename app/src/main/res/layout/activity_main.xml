@@ -5,52 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.coco.imlivedemo.MainActivity">
+    tools:context="com.coco.imlivedemo.ui.MainActivity">
 
-    <ListView
-        android:id="@+id/listview"
+    <EditText
+        android:id="@+id/mEd_chat_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:divider="@null">
+        android:layout_margin="20dp"
+        android:text="Cocoaaa" />
 
-    </ListView>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#898989" />
-
-    <LinearLayout
+    <Button
+        android:id="@+id/mBtn_start_chat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:text="start chat" />
 
-        <Button
-            android:id="@+id/btn_left"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_margin="5dp"
-            android:background="#ddf"
-            android:text="左边"
-            android:textColor="#fff" />
-
-        <EditText
-            android:id="@+id/et_meg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <Button
-            android:id="@+id/btn_right"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_margin="5dp"
-            android:background="#0ff"
-            android:text="右边"
-            android:textColor="#fff" />
-
-    </LinearLayout>
 
 </LinearLayout>

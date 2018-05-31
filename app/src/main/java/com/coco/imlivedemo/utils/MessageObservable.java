@@ -1,4 +1,4 @@
-package com.coco.imlivedemo;
+package com.coco.imlivedemo.utils;
 
 import com.tencent.TIMMessage;
 import com.tencent.TIMUserProfile;

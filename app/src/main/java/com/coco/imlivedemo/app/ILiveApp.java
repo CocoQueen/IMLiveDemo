@@ -2,12 +2,7 @@ package com.coco.imlivedemo.app;
 
 import android.app.Application;
 
-import com.coco.imlivedemo.MessageObservable;
-import com.coco.imlivedemo.R;
-import com.tencent.TIMGroupReceiveMessageOpt;
-import com.tencent.TIMManager;
-import com.tencent.TIMOfflinePushListener;
-import com.tencent.TIMOfflinePushNotification;
+import com.coco.imlivedemo.utils.MessageObservable;
 import com.tencent.ilivesdk.ILiveSDK;
 import com.tencent.ilivesdk.core.ILiveLog;
 import com.tencent.livesdk.ILVLiveConfig;
