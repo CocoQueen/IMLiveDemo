@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/mTool"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:background="@color/colorPrimary"
-        app:titleTextColor="#fff" />
+    <!--<android.support.v7.widget.Toolbar-->
+        <!--android:id="@+id/mTool"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:background="@color/colorPrimary"-->
+        <!--app:titleTextColor="#fff" />-->
 
 
     <LinearLayout
@@ -36,92 +36,13 @@
 
     </LinearLayout>
 
-    <!--<LinearLayout-->
-    <!--android:id="@+id/ll_sendmsg"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_alignParentRight="true"-->
-    <!--android:orientation="horizontal">-->
-
-    <!--<TextView-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_weight="1" />-->
-
-
-    <!--<TextView-->
-    <!--android:id="@+id/mTv_send"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginTop="10dp"-->
-    <!--android:background="#ddf"-->
-    <!--android:text="hahahhahah" />-->
-
-    <!--<LinearLayout-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:orientation="vertical">-->
-
-    <!--<ImageView-->
-    <!--android:layout_width="50dp"-->
-    <!--android:layout_height="50dp"-->
-    <!--android:src="@mipmap/ic_launcher" />-->
-
-    <!--<TextView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_gravity="center"-->
-    <!--android:text="静香" />-->
-
-    <!--</LinearLayout>-->
-
-
-    <!--</LinearLayout>-->
-
-    <!--<LinearLayout-->
-    <!--android:id="@+id/ll_getmsg"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:orientation="horizontal">-->
-
-    <!--<LinearLayout-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:orientation="vertical">-->
-
-    <!--<ImageView-->
-    <!--android:layout_width="50dp"-->
-    <!--android:layout_height="50dp"-->
-    <!--android:src="@mipmap/ic_launcher" />-->
-
-    <!--<TextView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_gravity="center"-->
-    <!--android:layout_marginTop="5dp"-->
-    <!--android:text="鸣人" />-->
-
-    <!--</LinearLayout>-->
-
-
-    <!--<TextView-->
-    <!--android:id="@+id/mTv_get"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginTop="20dp"-->
-    <!--android:background="#aa83f183"-->
-    <!--android:text="啦啦啦啦啦" />-->
-
-
-    <!--</LinearLayout>-->
     <ListView
         android:id="@+id/mLv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="@null"
         android:layout_above="@id/ll_send"
-        android:transcriptMode="alwaysScroll"
-        >
+        android:divider="@null"
+        android:transcriptMode="alwaysScroll">
 
     </ListView>
 
@@ -130,16 +51,14 @@
         android:layout_height="220dp"
         android:layout_above="@id/ll_send"
         android:layout_alignParentRight="true"
-        android:background="#a09cf25b"
-        >
+        android:background="#a09cf25b">
 
         <ListView
             android:id="@+id/mLv_send"
             android:layout_width="match_parent"
-            android:divider="@null"
             android:layout_height="match_parent"
-            android:transcriptMode="alwaysScroll"
-            />
+            android:divider="@null"
+            android:transcriptMode="alwaysScroll" />
     </LinearLayout>
 
 </RelativeLayout>
