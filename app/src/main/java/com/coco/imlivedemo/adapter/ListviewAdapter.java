@@ -95,10 +95,10 @@ public class ListviewAdapter extends BaseAdapter {
 
         public ViewHolder(View rootView) {
             this.rootView = rootView;
-            this.text_left = (TextView) rootView.findViewById(R.id.text_left);
-            this.left = (LinearLayout) rootView.findViewById(R.id.left);
-            this.text_right = (TextView) rootView.findViewById(R.id.text_right);
-            this.right = (LinearLayout) rootView.findViewById(R.id.right);
+//            this.text_left = (TextView) rootView.findViewById(R.id.text_left);
+//            this.left = (LinearLayout) rootView.findViewById(R.id.left);
+//            this.text_right = (TextView) rootView.findViewById(R.id.text_right);
+//            this.right = (LinearLayout) rootView.findViewById(R.id.right);
         }
 
     }

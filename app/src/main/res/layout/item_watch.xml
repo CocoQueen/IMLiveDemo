@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/ll_sendmsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+
+        <TextView
+            android:id="@+id/mTv_send"
+            android:layout_width="wrap_content"
+            android:singleLine="false"
+            android:maxWidth="150dp"
+            android:maxLines="10"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#ddf"
+            android:text="hahahhahah" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="静香" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
