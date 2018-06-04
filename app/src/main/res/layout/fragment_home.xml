@@ -18,6 +18,12 @@
         android:layout_height="wrap_content"
         android:text="添加好友" />
 
+    <TextView
+        android:id="@+id/mTv_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="" />
+
     <ListView
         android:id="@+id/mLv_lb"
         android:layout_width="match_parent"

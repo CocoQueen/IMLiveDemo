@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -15,10 +16,16 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.coco.imlivedemo.R;
 import com.coco.imlivedemo.ui.AddFriendtivity;
+import com.tencent.TIMGroupBaseInfo;
+import com.tencent.TIMGroupManager;
+import com.tencent.TIMValueCallBack;
+
+import java.util.List;
 
 /**
  * Created by ydx on 18-5-31.
@@ -29,6 +36,8 @@ public class HomeFragment extends Fragment{
     private ListView mLv_lb;
     private Toolbar mTool;
     private Button mBtn_intent;
+    private TextView mTv_group;
+    private static final String TAG = "HomeFragment";
 
     @Nullable
     @Override
@@ -41,6 +50,30 @@ public class HomeFragment extends Fragment{
     private void initView(View view) {
         mLv_lb = view.findViewById(R.id.mLv_lb);
         mBtn_intent = view.findViewById(R.id.mBtn_intent);
+
+        mTv_group = view.findViewById(R.id.mTv_group);
+
+
+
+        TIMGroupManager.getInstance().getGroupList(new TIMValueCallBack<List<TIMGroupBaseInfo>>() {
+            @Override
+            public void onError(int i, String s) {
+                Log.e(TAG, "get gruop list failed: " + i + " desc");
+            }
+
+            @Override
+            public void onSuccess(List<TIMGroupBaseInfo> timGroupBaseInfos) {
+                Log.d(TAG, "get gruop list succ");
+                for(TIMGroupBaseInfo info : timGroupBaseInfos) {
+                    mTv_group.setText("我加入的群: \n"+info.getGroupId()+"\n"+info.getGroupName());
+                    Log.d(TAG, "group id: " + info.getGroupId() +
+                            " group name: " + info.getGroupName() +
+                            " group type: " + info.getGroupType());
+                }
+            }
+        });
+
+
 //        mTool = view.findViewById(R.id.mTool);
         mBtn_intent.setOnClickListener(new View.OnClickListener() {
             @Override
