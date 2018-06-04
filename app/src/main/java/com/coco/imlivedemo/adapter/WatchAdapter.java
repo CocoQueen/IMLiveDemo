@@ -46,17 +46,19 @@ public class WatchAdapter extends BaseAdapter {
             holder = new ViewHolder();
             convertView = View.inflate(context, R.layout.item_watch, null);
             holder.mTv_sendMsg = convertView.findViewById(R.id.mTv_send);
+            holder.mTv_watchId=convertView.findViewById(R.id.mTv_watchId);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
         holder.mTv_sendMsg.setText(list.get(position));
+//        holder.mTv_watchId.setText();
 
         return convertView;
     }
 
     class ViewHolder {
-        TextView mTv_sendMsg;
+        TextView mTv_sendMsg,mTv_watchId;
     }
 
 }

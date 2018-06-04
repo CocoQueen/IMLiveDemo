@@ -28,7 +28,7 @@ public class ILiveApp extends Application {
         if (MsfSdkUtils.isMainProcess(this)) {    // 仅在主线程初始化
             // 初始化LiveSDK
             ILiveLog.setLogLevel(ILiveLog.TILVBLogLevel.DEBUG);
-            ILiveSDK.getInstance().initSdk(this, 1400059305, 18395);
+            ILiveSDK.getInstance().initSdk(this, 	1400093719, 	18395);
             ILVLiveManager.getInstance().init(new ILVLiveConfig()
                     .setLiveMsgListener(MessageObservable.getInstance()));
 //            TIMManager.getInstance().setOfflinePushListener(new TIMOfflinePushListener() {

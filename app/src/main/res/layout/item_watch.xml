@@ -20,13 +20,13 @@
         <TextView
             android:id="@+id/mTv_send"
             android:layout_width="wrap_content"
-            android:singleLine="false"
-            android:maxWidth="150dp"
-            android:maxLines="10"
-            android:marqueeRepeatLimit="marquee_forever"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="#ddf"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="10"
+            android:maxWidth="150dp"
+            android:singleLine="false"
             android:text="hahahhahah" />
 
         <LinearLayout
@@ -42,6 +42,7 @@
                 android:src="@mipmap/ic_launcher" />
 
             <TextView
+                android:id="@+id/mTv_watchId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

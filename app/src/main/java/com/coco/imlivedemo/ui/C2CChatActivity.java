@@ -84,7 +84,7 @@ public class C2CChatActivity extends AppCompatActivity implements View.OnClickLi
         mLv_send = findViewById(R.id.mLv_send);
 
         mBtn_send.setOnClickListener(this);//发送消息按钮的监听
-        setTitle("与" + user + "的聊天窗口");//设置聊天对象标题
+        setTitle(user+"正在聊天");//设置聊天对象标题
 
     }
 
@@ -155,6 +155,7 @@ public class C2CChatActivity extends AppCompatActivity implements View.OnClickLi
                 mLv_send.setAdapter(adapter);
                 mLv_send.setSelection(adapter.getCount());
 //                mTv_send.setText(msg_send);
+                Toast.makeText(C2CChatActivity.this, user+"fasongle"+msg_send, Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -169,6 +170,8 @@ public class C2CChatActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onNewTextMsg(ILVText text, String SenderId, TIMUserProfile userProfile) {
         String getmsg = text.getText();
+        String nickName = userProfile.getNickName();
+        Toast.makeText(this, nickName+"发来了"+getmsg, Toast.LENGTH_SHORT).show();
         list.add(getmsg);
         HostAdapter adapter = new HostAdapter(list, this);
         mLv.setAdapter(adapter);

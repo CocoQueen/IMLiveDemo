@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!--  1. Retrofit　　
+    一句话介绍：Retrofit是一款类型安全的网络框架，基于HTTP协议，服务于Android和java语言
+    官网地址 http://square.github.io/retrofit/
+    github   https://github.com/square/retrofit
+
+    2.okhttp
+    一句话介绍：okhttp是一款基于HTTP和HTTP2.0协议的网络框架，服务于java和android客户端
+    官网地址   http://square.github.io/okhttp/
+    github    https://github.com/square/okhttp
+
+    3.Butter Knife
+    一句话介绍：Butter Knife所提供了一种能力——使用注解生成模板代码，将view与方法和参数绑定。
+    官网地址：http://jakewharton.github.io/butterknife/
+    github：https://github.com/JakeWharton/butterknife
+
+    4.MPAndroidChart
+    一句话介绍：MPAndroidChart是一款图表框架
+    官网地址 https://github.com/PhilJay/MPAndroidChart
+    github  https://github.com/PhilJay/MPAndroidChart
+
+    5. glide
+    一句话介绍：glide是一款专注于提供流畅划动能力的“图片加载和缓存框架”
+    github https://github.com/bumptech/glide
+
+    6.leakcanary
+    一句话介绍：一款内存检测框架，服务于java和android客户端
+    github https://github.com/square/leakcanary
+
+    7.Android-Universal-Image-Loader
+    一句话介绍：曾经的图片加载框架王者，android开发老手都用过它
+    github https://github.com/nostra13/Android-Universal-Image-Loader
+
+    8.EventBus
+    一句话介绍：EventBus是一款本地组件间通信框架
+    官网地址 http://greenrobot.org/eventbus/documentation/how-to-get-started/
+    github  https://github.com/greenrobot/EventBus
+
+    9.zxing
+    一句话介绍：条码图像处理库
+    github  https://github.com/zxing/zxing
+
+    10.picasso
+    一句话介绍：强力的图片下载、缓存框架
+    官网地址 http://square.github.io/picasso/
+    github  https://github.com/square/picasso
+
+    11.lottie-android
+    一句话介绍：一款可以在Android端快速展示Adobe Afeter Effect（AE）工具所作动画的框架
+    github  https://github.com/airbnb/lottie-android
+
+    12.fresco
+    一句话介绍：一款可以管理图片内存的框架
+    官网地址： https://www.fresco-cn.org/
+    github  https://github.com/facebook/fresco
+
+    13.RxAndroid
+    一句话介绍：一款Android客户端组件间异步通信的框架
+    github  https://github.com/ReactiveX/RxAndroid
+
+    14.SlidingMenu
+    一句话介绍：侧滑菜单栏框架
+    github https://github.com/jfeinstein10/SlidingMenu
+
+    15.PhotoView
+    一句话介绍：一款ImageView展示框架，支持缩放，响应手势
+    github  https://github.com/chrisbanes/PhotoView
+
+    16.material-dialogs
+    一句话介绍：一款自定义dialog框架
+    github  https://github.com/afollestad/material-dialogs
+
+    17.droid-async-http
+    一句话介绍：一款基于Http协议的异步请求的网络框架，
+    github   https://github.com/loopj/android-async-http
+
+    18.androidannotations
+    一句话介绍：一款基于注解的快速开发框架
+    官网地址 http://androidannotations.org/
+    github https://github.com/androidannotations/androidannotations
+
+    19.fastjson
+    一句话介绍:一款基于json解析、生成的框架
+    github  https://github.com/alibaba/fastjson
+
+    20.Material-Animations
+    一句话介绍：一款提供场景转换过渡能力的动画框架
+    github  https://github.com/lgvalle/Material-Animations
+
+    21.tinker
+    一句话介绍：它是微信官网的Android热补丁解决方案
+    官网地址  http://www.tinkerpatch.com/Docs/intro
+    github   https://github.com/Tencent/tinker
+
+    22.ViewPagerIndicator
+    一句话介绍：一款基于ViewPager的页面指示器开源框架
+    官网地址 http://viewpagerindicator.com/
+    github  https://github.com/JakeWharton/ViewPagerIndicator
+
+    23.Android-CleanArchitecture
+    一句话介绍：一个讲解设计框架的demo
+    github  https://github.com/android10/Android-CleanArchitecture
+
+    24..Android-PullToRefresh
+    一句话介绍：一款为普通视图提供刷新UI的视图框架
+    github https://github.com/chrisbanes/Android-PullToRefresh
+
+    25.flexbox-layout
+    一句话介绍：一款弹性伸缩布局
+    github  https://github.com/google/flexbox-layout
+
+    26.AndroidSwipeLayout
+    一句话介绍：非常强大滑动式布局
+    github https://github.com/daimajia/AndroidSwipeLayout
+
+    27.realm-java
+    一句话介绍：Realm是一款移动端数据库框架
+    官网地址：https://realm.io/cn/
+    github https://github.com/realm/realm-java
+
+    28.greenDAO
+    一句话介绍：greenDAO是一款高效、快速的SQLite型数据库
+    官网地址：http://greenrobot.org/greendao/
+    github  https://github.com/greenrobot/greenDAO
+
+    29.stetho
+    一句话介绍：一款提供在Chrome开发者工具上调试Android app能力的开源框架
+    官网地址： http://facebook.github.io/stetho/
+    github   https://github.com/facebook/stetho
+
+    30.BaseRecyclerViewAdapterHelper
+    一句话介绍：强大、流畅的Recyvlerview通用适配器
+    官网地址：http://www.recyclerview.org/
+
+    31.AndroidViewAnimations
+    一句话介绍：一款提供可爱动画集合的框架
+    github https://github.com/daimajia/AndroidViewAnimations
+
+    32. MaterialDrawer
+    一句话介绍：强大的塑料风格的抽屉框架
+    github  https://github.com/mikepenz/MaterialDrawer
+
+    33.Android-ObservableScrollView
+    一句话介绍：一款让视图滑动更具有视觉效果的滑动式框架
+    github https://github.com/ksoichiro/Android-ObservableScrollView
+
+    34.CircleImageView
+    一句话介绍：圆角ImageView
+    github https://github.com/hdodenhof/CircleImageView
+
+    35.logger
+    一句话介绍：一款让log日志优雅显示的框架
+    github https://github.com/orhanobut/logger
+
+    36.agera
+    一句话介绍:一款服务于Android平台的响应式编程框架
+    github https://github.com/google/agera
+
+    37.BottmBar
+    一句话介绍：一款底部导航栏视图框架
+    github  https://github.com/roughike/BottomBar
+
+    38.Calligraphy
+    一句话介绍：一款自定义字体框架
+    github  https://github.com/chrisjenx/Calligraphy
+
+    39.AndroidSlidingUpPanel
+    一句话介绍：可拖动的滑动面板视图框架
+    github https://github.com/umano/AndroidSlidingUpPanel
+
+    40.AppIntro
+    一句话介绍：一款提供快速制作欢迎页的框架
+    github https://github.com/apl-devs/AppIntro
+
+    41.recyclerview-animators
+    一句话介绍：一款为Recyclerview提供扩展动画能力的框架
+    github  https://github.com/wasabeef/recyclerview-animators
+
+    42.dagger
+    一句话介绍：一款通过依赖注入降低程序间耦合的开发框架
+    官网地址：https://google.github.io/dagger/
+    github ：https://github.com/google/dagger
+
+    43.Android-Bootstarp
+    一句话介绍：一款提供在Android应用上实现Bootstrap（web框架）所作出效果的框架
+    github https://github.com/Bearded-Hen/Android-Bootstrap
+
+    44.RxBinding
+    一句话介绍：一款提供UI组件事件响应能力的框架
+    github  https://github.com/JakeWharton/RxBinding
+
+    45.ListViewAnimations
+    一句话介绍：一款为ListView提供动展示画效果能力的框架
+    github  https://github.com/nhaarman/ListViewAnimations
+
+    46.UItimateRecyclerView
+    一句话介绍：一款提供刷新、加载更多、动画特效等额外能力的RecyclerView框架
+    github  https://github.com/cymcsg/UltimateRecyclerView
+
+    47.uCrop
+    一句话介绍：一款优雅的图片裁剪框架
+    github  https://github.com/Yalantis/uCrop
+
+    48.RxJava-Android-Samples
+    一句话介绍：一款介绍RxJava使用场景的app
+    github  https://github.com/kaushikgopal/RxJava-Android-Samples
+
+    49.AndroidAutoLayout
+    一句话介绍：一个提供适配能力的框架
+    github https://github.com/hongyangAndroid/AndroidAutoLayout
+
+    50.EffectiveAndroidUI
+    一句话介绍：一款讲解高效展示UI的教学型App
+    github  https://github.com/pedrovgs/EffectiveAndroidUI
+
+    51.Luban
+    一句话介绍：最接近微信的图片压缩框架
+    github  https://github.com/Curzibn/Luban
+
+    52.DroidPlugin
+    一句话介绍：一款热门的插件化开发框架
+    github https://github.com/DroidPluginTeam/DroidPlugin/blob/master/readme_cn.md
+
+    53. otto
+    一句话介绍:一款老旧且强大的事件总线框架
+    github https://github.com/square/otto
+
+    54.u2020
+    一句话介绍：一款提供Dagger的高级教学示例的app
+    github  https://github.com/JakeWharton/u2020
+
+    55.buck
+    一句话介绍：buck是一个快速构建系统
+    github  https://github.com/facebook/buck
+
+    56.PermissionsDispatcher
+    一句话介绍：一款基于注解的提供解决运行时危险权限方案的框架
+    官网地址：https://hotchemi.github.io/PermissionsDispatcher/
+    github https://github.com/hotchemi/PermissionsDispatcher
+
+    57.android-gif-drawable
+    一句话介绍:一款提供展示GIF动画能力的视图框架
+    github https://github.com/koral&#45;&#45;/android-gif-drawable
+
+    58.Apktool
+    一句话介绍：一款反编译apk的工具
+    github  https://github.com/iBotPeaches/Apktool
+    官网地址：https://ibotpeaches.github.io/Apktool/
+
+    59.dynamic-load-apk
+    一句话介绍：插件化开发框架
+    github：https://github.com/singwhatiwanna/dynamic-load-apk
+
+    60.atlas
+    一句话介绍：淘宝推出的组件化开发框架
+    github https://github.com/alibaba/atlas
+
+    61.volley
+    一句话介绍：google推荐使用的Android端网络请求框架
+    github https://github.com/google/volley（新版volley地址）
+
+    62.androidmvp
+    一句话介绍：一款展示Android端Mvp设计的demo
+    github  https://github.com/antoniolg/androidmvp
+
+    63.SwipeBackLayout
+    一句话介绍:一款可以让你通过滑动手势关闭页面的的框架
+    github https://github.com/ikew0ng/SwipeBackLayout
+
+    64.FlycoTabLayout
+    一句话介绍：一款可以让作出多种多样指示器效果的框架
+    github  https://github.com/H07000223/FlycoTabLayout
+
+    65.android-testing
+    一句话介绍：一款展示四大自动化测试框架用例的demo（Espresso，UiAutomator，AndroidJunitRunner，JUnit4）
+    github https://github.com/googlesamples/android-testing
+
+    66.FileDownloader
+    一句话介绍：一款高效、稳定、灵活、易用的文件下载引擎
+    github https://github.com/lingochamp/FileDownloader
+
+    67.JieCaoVideoPlayer
+    一句话介绍：基于MediaPlayer api——VideoView 的多媒体播放框架
+    github https://github.com/lipangit/JieCaoVideoPlayer
+
+    68.glide-transformations
+    一句话介绍：为众多著名图片加载框架提供图片形状变幻能力的框架
+    github  https://github.com/wasabeef/glide-transformations
+
+    69.android-gpuimage
+    一句话介绍：一款基于OpenGL的图片渲染引擎
+    github：https://github.com/CyberAgent/android-gpuimage
+
+    70.RxPermissions
+    一句话介绍：一款基于RxJava完成权限申请的框架
+    github https://github.com/tbruyelle/RxPermissions
+
+    71.freeline
+    一句话介绍：一款动态替换的编译构建框架
+    官网地址：https://www.freelinebuild.com/
+    github：https://github.com/alibaba/freeline
+
+    72.RxLifecycle
+    一句话介绍：一款提供在使用RxJava过程中管理Activity和Fragment生命周期能力的框架
+    github  https://github.com/trello/RxLifecycle
+
+    73.classyshark
+    一句话介绍：一款可执行文件浏览器
+    github  https://github.com/google/android-classyshark
+
+    74.acra
+    一句话介绍：一款提供记录APP崩溃日志能力的框架
+    github https://github.com/ACRA/acra
+    服务端github  https://github.com/ACRA/acralyzer
+
+    75.DiskLruCache
+    一句话介绍：一款提供磁盘文件缓存管理能力的框架
+    github https://github.com/JakeWharton/DiskLruCache
+
+    76.dexposed
+    一句话介绍：一款支撑阿里大部分App客户端热修复、线上调试能力的框架
+    github  https://github.com/alibaba/dexposed
+
+    77.Litho
+    一句话介绍：一款提供高效构建UI能力的框架
+    github  https://github.com/facebook/litho
+
+    78.mosby
+    一句话介绍：一款提供构建MVP项目能力的框架
+    github https://github.com/sockeqwe/mosby
+
+    79.AndResGuard
+    一句话介绍：一款提供资源文件路径混淆 的工具
+    github  https://github.com/shwenzhang/AndResGuard
+
+    80.StatusBarUtil
+    一句话介绍：一款提供设置沉浸式状态栏样式能力的框架
+    github https://github.com/laobie/StatusBarUtil
+
+    81.robolectric
+    一句话介绍：一款不依赖于Android设备的单元测试框架，
+    官网地址：http://robolectric.org/
+    github  https://github.com/robolectric/robolectric
+
+    82.Fragmentation
+    一句话介绍:一款提供管理Fragmen嵌套t能力的框架
+    github：https://github.com/YoKeyword/Fragmentation
+
+    83.Small
+    一句话介绍：轻巧的插件化框架
+    官网地址：http://code.wequick.net/Small/cn/cases
+    github  https://github.com/wequick/Small
+
+    84.JsBridge
+    一句话介绍：一款提供WebView和Javascript通信能力的框架
+    gtihub https://github.com/lzyzsd/JsBridge
+
+    85.richeditor-android
+    一句话介绍：一款强大的富文本编辑框架
+    github  https://github.com/wasabeef/richeditor-android
+
+    86.Transitions-Everywhere
+    一句话介绍：一款教你正确使用Transitions API（Android 转场动画API）的教学型项目
+    github  https://github.com/andkulikov/Transitions-Everywhere
+
+    87.android-viewbadger
+    一句话介绍：能够快速的为Android 视图加入“勋章”能力的框架
+    github https://github.com/jgilfelt/android-viewbadger
+
+    88.AndroidWiFiADB
+    一句话介绍：一款不用数据线也可以让你调试手机设备APP的插件项目
+    github https://github.com/pedrovgs/AndroidWiFiADB
+
+    89.emojicon
+    一句话介绍：一款提供在TextView、EdiText展示表情包能力的框架
+
+    90.packer-ng-plugin
+    一句话介绍：一款打包工具插件
+    github https://github.com/mcxiaoke/packer-ng-plugin
+
+    91.android-priority-jobqueue
+    一句话介绍：一款提供后台任务管理能力的框架
+    github  https://github.com/yigit/android-priority-jobqueue
+
+    92.Android-Debug-Database
+    一句话介绍：一款提供测试App内部数据库能力的框架
+    github  https://github.com/amitshekhariitbhu/Android-Debug-Database
+
+    93.conceal
+    一句话介绍：一款facebook提供的加密本地大文件的框架
+    官网地址：http://facebook.github.io/conceal/
+    github https://github.com/facebook/conceal
+
+    94.ARouter
+    一句话介绍：一款提供服务、页面跳转路由的框架
+    github  https://github.com/alibaba/ARouter
+
+    95.MagicaSakura
+    一句话介绍：一款提供多主题切换能力的框架
+    github https://github.com/Bilibili/MagicaSakura
+
+    96.CustomActivityOnCrash
+    一句话介绍：一款当APP crash的时候自动载入某个Activity的框架（而不是显示Unfortunately, X has stopped）
+    github  https://github.com/Ereza/CustomActivityOnCrash
+
+    97.XhsEmoticonsKeyboard
+    一句话介绍：最开心的开源表情解决方案
+    github https://github.com/w446108264/XhsEmoticonsKeyboard
+
+
+
+    资源来自于：https://blog.csdn.net/angle0306/article/details/78900051
+
+
+
+    vector drawable:
+    https://www.jianshu.com/p/4609cc43ecc8
+    https://www.jianshu.com/p/c1ead33d9a7d
+    https://blog.csdn.net/u014637884/article/details/72808452
+
+
+    支付宝境外支付接入：
+    https://www.cnblogs.com/cunkouzh/p/5640540.html
+    https://blog.csdn.net/xiaopingping1234567/article/details/48288205
+    https://blog.csdn.net/fwt336/article/details/77113115
+    https://blog.csdn.net/sinat_32961877/article/details/79530105
+    ping++
+    https://help.pingxx.com/article/110815
+    paypal
+    https://www.jianshu.com/p/7a064f2fbfa0
+    https://blog.csdn.net/geekqian/article/details/51297837
+
+
+    生产和开发环境的分离：
+    https://blog.csdn.net/ziqiang1/article/details/51056595
+    https://blog.csdn.net/zhiflying/article/details/64131439
+    https://www.jianshu.com/p/52d05b4e7f4c
+    http://www.jb51.net/article/125606.htm
+
+
+    gradle配置了解：
+    http://www.jb51.net/article/125602.htm
+
+    提升自己：(工作瓶颈)
+    https://juejin.im/post/5af44a1651882567277472df
+
+    上传应用到google play：
+    https://www.jianshu.com/p/e40e78a279b7
+
+    关于线程池:
+    https://juejin.im/post/5b052dd7f265da0ba567e7f1
+
+    布兰柯基的博客:
+    https://blankj.com/
+
+    屏幕适配方案:
+    https://blog.csdn.net/wangwangli6/article/details/63258270
+
+    腾讯云互动直播综述:
+    https://blog.csdn.net/lanye11/article/details/53331163
+    腾讯云视频直播开发攻略:
+    https://blog.csdn.net/shaoyezhangliwei/article/details/52908805
+    腾讯云官方:
+    https://cloud.tencent.com/document/product/454/7980(直播 弹幕聊天室)
+    https://cloud.tencent.com/document/product/269/1561(云通信 消息接收和发送)
+    https://cloud.tencent.com/document/product/454/6560(移动直播 新手指引)
+    (官方方法api)
+    http://avc.qcloud.com/wiki/im/wiki_pdf/4_jishitongxunyun/2_kehuduanjicheng/imsdk_android_javadoc/index.html?_ga=1.79344916.189975042.1526953317
+    (直播场景下的 IM 集成方案)
+    https://cloud.tencent.com/document/product/269/4104#.E7.9B.B4.E6.92.AD.E5.9C.BA.E6.99.AF.E4.B8.8B.E7.9A.84-im-.E9.9C.80.E6.B1.82
+    常见问题及客服咨询:
+    https://cloud.tencent.com/document/product/269/4167
+    简书:
+    https://www.jianshu.com/nb/10808030(从0开始开发一款直播APP)
+    https://github.com/angelOnly/LiveStreaming
+    https://blog.csdn.net/chenshuaiforwork/article/details/52710341(新手注意的坑)
+    https://github.com/zhaoyang21cn/Android_Suixinbo(随心播代码导读)
+
+    常见的版本控制工具:
+    https://blog.csdn.net/ribavnu/article/details/51483167-->
+
+</resources>
