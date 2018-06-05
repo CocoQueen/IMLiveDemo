@@ -21,6 +21,7 @@ import com.coco.imlivedemo.adapter.WatchAdapter;
 import com.coco.imlivedemo.utils.MessageObservable;
 import com.tencent.TIMConversation;
 import com.tencent.TIMGroupManager;
+import com.tencent.TIMManager;
 import com.tencent.TIMMessage;
 import com.tencent.TIMUserProfile;
 import com.tencent.TIMValueCallBack;
@@ -53,6 +54,8 @@ public class C2CChatActivity extends AppCompatActivity implements View.OnClickLi
     private ListView mLv, mLv_send;
     List<String> list = new ArrayList<>();
     List<String> list_send = new ArrayList<>();
+    private WatchAdapter adapter;
+
 //    private Toolbar mTool;
 
     @Override
@@ -82,9 +85,53 @@ public class C2CChatActivity extends AppCompatActivity implements View.OnClickLi
 //        mTv_get = findViewById(R.id.mTv_get);
         mLv = findViewById(R.id.mLv);
         mLv_send = findViewById(R.id.mLv_send);
-
+        adapter = new WatchAdapter(list_send, C2CChatActivity.this);
+        initConversation();
         mBtn_send.setOnClickListener(this);//发送消息按钮的监听
         setTitle(user+"正在聊天");//设置聊天对象标题
+
+
+    }
+
+    private void initConversation() {
+        //获取会话个数
+        long cnt = TIMManager.getInstance().getConversationCount();
+        //遍历会话列表
+        for (long i = 0; i < cnt; ++i) {
+            //根据索引获取会话
+            conversation =
+                    TIMManager.getInstance().getConversationByIndex(i);
+            Log.d(TAG, "get conversation. type: " + conversation.getType());
+        }
+//        List<TIMMessage> lastMsgs = conversation.getLastMsgs(cnt);
+//        TIMMessage last = lastMsgs.get(lastMsgs.size() - 1);
+
+        //获取此会话的消息
+        conversation.getMessage(10, //获取此会话最近的 10 条消息
+                null, //不指定从哪条消息开始获取 - 等同于从最新的消息开始往前
+                new TIMValueCallBack<List<TIMMessage>>() {
+                    public TIMMessage lastMsg=null;//回调接口
+                    @Override
+                    public void onError(int code, String desc) {//获取消息失败
+                        //接口返回了错误码 code 和错误描述 desc，可用于定位请求失败原因
+                        //错误码 code 含义请参见错误码表
+                        Log.d(TAG, "get message failed. code: " + code + " errmsg: " + desc);
+                    }
+
+                    @Override
+                    public void onSuccess(List<TIMMessage> msgs) {//获取消息成功
+                        //遍历取得的消息
+                        for (TIMMessage msg : msgs) {
+                            lastMsg = msg;
+                            list_send.add(msg.getSender());
+                            mLv_send.setAdapter(adapter);
+                            mLv_send.setSelection(adapter.getCount());
+                            //可以通过 timestamp()获得消息的时间戳, isSelf()是否为自己发送的消息
+                            Log.e(TAG, "get msg: " + msg.timestamp() + " self: " + msg.isSelf() + " seq: " + msg.msg.seq());
+
+                        }
+                    }
+                });
 
     }
 
@@ -153,7 +200,7 @@ public class C2CChatActivity extends AppCompatActivity implements View.OnClickLi
             @Override
             public void onSuccess(Object data) {
                 list_send.add(msg_send);
-                WatchAdapter adapter = new WatchAdapter(list_send, C2CChatActivity.this);
+
                 mLv_send.setAdapter(adapter);
                 mLv_send.setSelection(adapter.getCount());
 //                mTv_send.setText(msg_send);
