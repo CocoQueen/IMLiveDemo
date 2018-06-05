@@ -20,11 +20,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.coco.imlivedemo.R;
+import com.coco.imlivedemo.adapter.HomeListAdapter;
 import com.coco.imlivedemo.ui.AddFriendtivity;
 import com.tencent.TIMGroupBaseInfo;
 import com.tencent.TIMGroupManager;
+import com.tencent.TIMManager;
 import com.tencent.TIMValueCallBack;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -37,7 +40,9 @@ public class HomeFragment extends Fragment{
     private Toolbar mTool;
     private Button mBtn_intent;
     private TextView mTv_group;
+    List<String>list=new ArrayList<>();
     private static final String TAG = "HomeFragment";
+    private HomeListAdapter adapter;
 
     @Nullable
     @Override
@@ -53,7 +58,7 @@ public class HomeFragment extends Fragment{
 
         mTv_group = view.findViewById(R.id.mTv_group);
 
-
+        adapter = new HomeListAdapter(list,getActivity());
 
         TIMGroupManager.getInstance().getGroupList(new TIMValueCallBack<List<TIMGroupBaseInfo>>() {
             @Override
@@ -65,7 +70,9 @@ public class HomeFragment extends Fragment{
             public void onSuccess(List<TIMGroupBaseInfo> timGroupBaseInfos) {
                 Log.d(TAG, "get gruop list succ");
                 for(TIMGroupBaseInfo info : timGroupBaseInfos) {
-                    mTv_group.setText("我加入的群: \n"+info.getGroupId()+"\n"+info.getGroupName());
+                    list.add(info.getGroupId()+"\n"+info.getGroupName());
+                    mLv_lb.setAdapter(adapter);
+//                    mTv_group.setText("我加入的群: \n"+info.getGroupId()+"\n"+info.getGroupName());
                     Log.d(TAG, "group id: " + info.getGroupId() +
                             " group name: " + info.getGroupName() +
                             " group type: " + info.getGroupType());
@@ -84,46 +91,24 @@ public class HomeFragment extends Fragment{
 
     }
 
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.add_friend,menu);
-    }
+//    @Override
+//    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+//        super.onCreateOptionsMenu(menu, inflater);
+//        inflater.inflate(R.menu.add_friend,menu);
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        switch (item.getItemId()){
+//            case R.id.action_addfriend:
+//                Toast.makeText(getActivity(), "点击了添加好友", Toast.LENGTH_SHORT).show();
+//
+//                return true;
+//            case R.id.action_addgroup:
+//                Toast.makeText(getActivity(), "点击了添加群组", Toast.LENGTH_SHORT).show();
+//                return true;
+//        }
+//        return super.onOptionsItemSelected(item);
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.action_addfriend:
-                Toast.makeText(getActivity(), "点击了添加好友", Toast.LENGTH_SHORT).show();
-
-                return true;
-            case R.id.action_addgroup:
-                Toast.makeText(getActivity(), "点击了添加群组", Toast.LENGTH_SHORT).show();
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    class MyAdapter extends BaseAdapter{
-
-        @Override
-        public int getCount() {
-            return 0;
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return null;
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return 0;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            return null;
-        }
-    }
+//    }
 }
