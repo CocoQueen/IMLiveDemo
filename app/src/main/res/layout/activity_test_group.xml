@@ -4,11 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:orientation="vertical"
     tools:context="com.coco.imlivedemo.ui.TestGroup">
+
     <TextView
         android:id="@+id/mTv_group"
-        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/mEd_invite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入好友的id" />
+
+    <Button
+        android:id="@+id/mBtn_invite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="邀请好友" />
+
+    <Button
+        android:id="@+id/mBtn_getFriend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取好友列表" />
+
+    <TextView
+        android:id="@+id/mTv_all_people"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/mTv_all_friend"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

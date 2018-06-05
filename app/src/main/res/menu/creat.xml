@@ -12,4 +12,10 @@
         android:icon="@mipmap/ic_launcher_round"
         android:title="创建直播大群"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_joingroup"
+        android:icon="@mipmap/ic_launcher_round"
+        android:title="邀请好友入群"
+        app:showAsAction="never" />
 </menu>

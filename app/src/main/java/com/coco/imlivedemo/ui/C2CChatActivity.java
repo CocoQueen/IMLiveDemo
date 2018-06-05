@@ -115,6 +115,8 @@ public class C2CChatActivity extends AppCompatActivity implements View.OnClickLi
             case R.id.action_createavgroup:
                 Toast.makeText(this, "点击了创建直播大群的按钮", Toast.LENGTH_SHORT).show();
                 return true;
+            case R.id.action_joingroup:
+                return true;
 
         }
         return super.onOptionsItemSelected(item);
