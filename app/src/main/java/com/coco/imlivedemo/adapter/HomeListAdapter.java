@@ -26,6 +26,7 @@ public class HomeListAdapter extends BaseAdapter {
     private List<String> list;
     private Context context;
     private String str;
+    private List<TIMConversation> conversionList=TIMManager.getInstance().getConversionList();
 
     public HomeListAdapter(List<String> list, Context context) {
         this.list = list;
@@ -34,12 +35,12 @@ public class HomeListAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return list.size();
+        return conversionList.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return list.get(position);
+        return conversionList.get(position);
     }
 
     @Override
@@ -50,37 +51,37 @@ public class HomeListAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
-        List<TIMConversation> conversionList = TIMManager.getInstance().getConversionList();
+//        conversionList = TIMManager.getInstance().getConversionList();
         TIMConversation conversation = conversionList.get(position);
         String identifer = conversation.getIdentifer();
-        long cnt = TIMManager.getInstance().getConversationCount();
-        //遍历会话列表
-        for(long i = 0; i < cnt; ++i) {
-            //根据索引获取会话
-           conversation =
-                    TIMManager.getInstance().getConversationByIndex(i);
-            Log.d(TAG, "get conversation. type: " + conversation.getType());
-        }
+//        long cnt = TIMManager.getInstance().getConversationCount();
+//        //遍历会话列表
+//        for(long i = 0; i < cnt; ++i) {
+//            //根据索引获取会话
+//           conversation =
+//                    TIMManager.getInstance().getConversationByIndex(i);
+//            Log.d(TAG, "get conversation. type: " + conversation.getType());
+//        }
+//
+//        List<TIMMessage> lastMsgs = conversation.getLastMsgs(cnt);
+//        TIMMessage message = lastMsgs.get(position);
 
-        List<TIMMessage> lastMsgs = conversation.getLastMsgs(cnt);
-        TIMMessage message = lastMsgs.get(position);
 
-
-        for(int i = 0; i < message.getElementCount(); ++i) {
-            TIMElem elem = message.getElement(i);
-            //获取当前元素的类型
-            TIMElemType elemType = elem.getType();
-            Log.d(TAG, "elem type: " + elemType.name());
-            if (elemType == TIMElemType.Text) {
-                //处理文本消息
-                boolean b = message.convertToImportedMsg();
-                int msg = conversation.importMsg(lastMsgs);
-                str = String.valueOf(msg);
-
-            } else if (elemType == TIMElemType.Image) {
-                Log.e(TAG, "getView: "+message.toString() );
-            }//...处理更多消息
-        }
+//        for(int i = 0; i < message.getElementCount(); ++i) {
+//            TIMElem elem = message.getElement(i);
+//            //获取当前元素的类型
+//            TIMElemType elemType = elem.getType();
+//            Log.d(TAG, "elem type: " + elemType.name());
+//            if (elemType == TIMElemType.Text) {
+//                //处理文本消息
+//                boolean b = message.convertToImportedMsg();
+//                int msg = conversation.importMsg(lastMsgs);
+//                str = String.valueOf(msg);
+//
+//            } else if (elemType == TIMElemType.Image) {
+//                Log.e(TAG, "getView: "+message.toString() );
+//            }//...处理更多消息
+//        }
 
 
         if (convertView == null) {
