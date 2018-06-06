@@ -54,8 +54,18 @@ public class HomeListAdapter extends BaseAdapter {
         TIMConversation conversation = conversionList.get(position);
         String identifer = conversation.getIdentifer();
         long cnt = TIMManager.getInstance().getConversationCount();
+        //遍历会话列表
+        for(long i = 0; i < cnt; ++i) {
+            //根据索引获取会话
+           conversation =
+                    TIMManager.getInstance().getConversationByIndex(i);
+            Log.d(TAG, "get conversation. type: " + conversation.getType());
+        }
+
         List<TIMMessage> lastMsgs = conversation.getLastMsgs(cnt);
         TIMMessage message = lastMsgs.get(position);
+
+
         for(int i = 0; i < message.getElementCount(); ++i) {
             TIMElem elem = message.getElement(i);
             //获取当前元素的类型
@@ -63,7 +73,10 @@ public class HomeListAdapter extends BaseAdapter {
             Log.d(TAG, "elem type: " + elemType.name());
             if (elemType == TIMElemType.Text) {
                 //处理文本消息
-                str = elemType.toString();
+                boolean b = message.convertToImportedMsg();
+                int msg = conversation.importMsg(lastMsgs);
+                str = String.valueOf(msg);
+
             } else if (elemType == TIMElemType.Image) {
                 Log.e(TAG, "getView: "+message.toString() );
             }//...处理更多消息
@@ -80,6 +93,7 @@ public class HomeListAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
         holder.mTv_myGroup.setText(list.get(position));
+
         holder.mTv_lastChat.setText(identifer+"=========="+str);
 
         return convertView;

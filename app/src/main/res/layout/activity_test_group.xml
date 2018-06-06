@@ -18,6 +18,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="输入好友的id" />
+    <EditText
+        android:id="@+id/mEd_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入发送的消息" />
 
     <Button
         android:id="@+id/mBtn_invite"
@@ -30,15 +35,36 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="获取好友列表" />
+    <Button
+        android:id="@+id/mBtn_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送群消息" />
 
     <TextView
         android:id="@+id/mTv_all_people"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="群内成员"
+        />
 
     <TextView
         android:id="@+id/mTv_all_friend"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="好友列表"
+        />
+    <TextView
+        android:id="@+id/mTv_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="群消息"
+        />
+    <TextView
+        android:id="@+id/mTv_get"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="接收到的群消息"
+        />
 
 </LinearLayout>
